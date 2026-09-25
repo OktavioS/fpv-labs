@@ -14,12 +14,12 @@ class FlyingToTargetHandler(FlightStateHandler):
     """Завдання 4: горизонтальний переліт до індивідуальної цільової точки.
 
     Ціль задається як зміщення (DELTA_X, DELTA_Y) від фактичної початкової
-    позиції дрона (варіант 19, Таблиця 2.3 методички):
+    позиції дрона (варіант 45, Таблиця 2.3 методички):
         x_target = x0 - DELTA_X
         y_target = y0 - DELTA_Y
     """
 
-    DELTA_X = 8.2
+    DELTA_X = 5.8
     DELTA_Y = -0.4
 
     POSITION_TOLERANCE = 0.25
@@ -38,7 +38,7 @@ class FlyingToTargetHandler(FlightStateHandler):
                 y0 - self.DELTA_Y,
             )
             node.get_logger().info(
-                f"Ціль (варіант 19): "
+                f"Ціль (варіант 45): "
                 f"({node.target_position[0]:.2f}, "
                 f"{node.target_position[1]:.2f}) м"
             )
